@@ -1,6 +1,6 @@
 # Freenow Assesment
 
-# Circle CI last build status
+## Circle CI last build status
 ![CircleCI](https://circleci.com/gh/sarputheen/freenow_home_task/tree/main.svg?style=svg)
 
 Mobile Application Auotomation
