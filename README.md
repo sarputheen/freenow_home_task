@@ -32,7 +32,7 @@ Gradle 7.3
 
         Run Command -  ./gradlew connectedAndroidTest
 
--if you get the permission denied error like this "zsh: permission denied: ./gradlew " Please run this command   chmod 777 * . Then use the Run Command
+- If you get the permission denied error like this "zsh: permission denied: ./gradlew " on your local, please run this command   chmod 777 * (For Mac and linux this command . Then use the Run Command
 
         Go to /app/build/reports 
 
