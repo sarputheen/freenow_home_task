@@ -1,6 +1,7 @@
 # Freenow Assesment
 
-[![CircleCI](https://circleci.com/gh/sarputheen/freenow_home_task/tree/main.svg?style=svg)]
+# Circle CI last build status
+![CircleCI](https://circleci.com/gh/sarputheen/freenow_home_task/tree/main.svg?style=svg)
 
 Mobile Application Auotomation
 
@@ -54,23 +55,3 @@ There you can see 2 types of report folders
 - Search Driver input field - No search result found when there is no matching driver name
 - location - get the current location and its coordinate ( latitude & longitude)
 - Driver profile validation - profile image, name, location icon and name , calender icon and date
-
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
