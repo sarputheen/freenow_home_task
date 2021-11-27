@@ -9,6 +9,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: List Images
+          command: |
+            sdkmanager --list --verbose | grep system-images
+      - run:
           name: Create avd
           command: |
             echo $ANDROID_HOME
@@ -17,13 +21,23 @@ jobs:
             ls
             gradle -v
             gradle wrapper
-            SYSTEM_IMAGES="system-images;android-29;google_apis;x86"
-            sdkmanager "$SYSTEM_IMAGES"
-            echo "no" | avdmanager --verbose create avd -n test -k "$SYSTEM_IMAGES"
+            SYSTEM_IMAGE1="system-images;android-28;google_apis;x86"
+            SYSTEM_IMAGE2="system-images;android-29;google_apis;x86"
+            SYSTEM_IMAGE3="system-images;android-30;google_apis;x86"
+            
+            
+            sdkmanager "$SYSTEM_IMAGE1"
+            sdkmanager "$SYSTEM_IMAGE2"
+            sdkmanager "$SYSTEM_IMAGE3"
+            echo "no" | avdmanager --verbose create avd -n Device1 -k "$SYSTEM_IMAGE1"
+            echo "no" | avdmanager --verbose create avd -n Device2 -k "$SYSTEM_IMAGE2"
+            echo "no" | avdmanager --verbose create avd -n Device3 -k "$SYSTEM_IMAGE3"
       - run:
-          name: Launch emulator
+          name: Launch emulators
           command: |
-            emulator -avd test -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+            emulator -avd Device1 -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+            emulator -avd Device2 -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+            emulator -avd Device3 -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
           background: true
       
       - run:
@@ -68,10 +82,7 @@ jobs:
           command: |
             pwd
             ls -ltr
-            mkdir -p ~test-reports
           when: always
-      - store_test_results:
-          path: ~/project/app/build/reports
       - store_artifacts:
           path: ~/project/app/build/reports
                
