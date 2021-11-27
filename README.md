@@ -28,13 +28,15 @@ Gradle 7.3
 ## Steps for Local Execution
 - Download and Extract this project to your local or use git clone https://github.com/sarputheen/freenow_home_task
 - Open project in Android Studio - Please wait untill the project gets loaded completely
-- Open the Terminal in the Android Studio or Use the windows 
+- Open the Terminal in the Android Studio or Navigate to the poject directory in the deskop terminal 
 
-        Run Command -  ./gradlew connectedAndroidTest
+        Run Command -  ./gradlew connectedAndroidTest ( Mac or Linux)
+        Run Command -  gradlew connectedAndroidTest (Windows)
 
-- If you get the permission denied error like this "zsh: permission denied: ./gradlew " on your local, please run this command   chmod 777 * (For Mac and linux this command . Then use the Run Command
-
-        Go to /app/build/reports 
+- If you get the permission denied error like this "zsh: permission denied: ./gradlew " on your local, please run this command   chmod 777 * (For Mac and linux this command) . Then use the Run Command
+- Once the test execution completed go to the below path in the project directory to view the test reports
+        
+        /app/build/reports 
 
 There you can see 2 types of report folders
 1. androidTests - Test execution report
