@@ -1,5 +1,7 @@
 # Freenow Assesment
 
+[![CircleCI](https://circleci.com/gh/sarputheen/freenow_home_task/tree/main.svg?style=svg)]
+
 Mobile Application Auotomation
 
 ## Tech stack Used
