@@ -12,9 +12,9 @@ Language - Java
 Gradle 7.3
 
 ## Project Setup 
-Feature file - /app/src/androidTest/assets/features/login.feature
-Step Defenition - /app/src/androidTest/java/com/freenow/android_demo/activities/MainActivitySteps.java
-Runner file - /app/src/androidTest/java/com/freenow/android_demo/activities/Instrumentation.java
+- Feature file - /app/src/androidTest/assets/features/login.feature
+- Step Defenition - /app/src/androidTest/java/com/freenow/android_demo/activities/MainActivitySteps.java
+- Runner file - /app/src/androidTest/java/com/freenow/android_demo/activities/Instrumentation.java
 
 
 ## Prerequisites 
@@ -30,11 +30,11 @@ Runner file - /app/src/androidTest/java/com/freenow/android_demo/activities/Inst
 - Open project in Android Studio - Please wait untill the project gets loaded completely
 - Open the Terminal in the Android Studio or Use the windows 
 
-Run Command -  ./gradlew connectedAndroidTest
+        Run Command -  ./gradlew connectedAndroidTest
 
 -if you get the permission denied error like this "zsh: permission denied: ./gradlew " Please run this command   chmod 777 * . Then use the Run Command
 
-Go to /app/build/reports 
+        Go to /app/build/reports 
 
 There you can see 2 types of report folders
 1. androidTests - Test execution report
