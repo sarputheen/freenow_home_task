@@ -9,10 +9,10 @@ Mobile Application Auotomation
 Java, Cucumber,Gradle, Espresso, Junit Report
 
 ## Approach 
-Project - Gradle
-Framework - Cucumber(For Test approach), Espresso(For Mobile UI Automation), Cucumber(For Test Execution ), Junit(For Report)
-Language - Java 
-Gradle 7.3
+- Project - Gradle
+- Framework - Cucumber(For Test approach), Espresso(For Mobile UI Automation), Cucumber(For Test Execution ), Junit(For Report)
+- Language - Java 
+- Gradle 7.3
 
 ## Project Setup 
 - Feature file - /app/src/androidTest/assets/features/login.feature
